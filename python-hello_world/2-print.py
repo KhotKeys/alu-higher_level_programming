@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-echo 'print("Programming is like building a multilingual puzzle")' > 2-print.py
+print("Programming is like building a multilingual puzzle")
 python 2-print.py
