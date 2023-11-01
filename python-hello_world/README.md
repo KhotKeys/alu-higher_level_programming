@@ -1,1 +1,1 @@
-Gabriel khot
+Gabriel Khot Garang Pawuoi
