@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 def print_last_digit(number):
     # Get the last digit by taking the absolute value of the number and then using modulo 10
     last_digit = abs(number) % 10
