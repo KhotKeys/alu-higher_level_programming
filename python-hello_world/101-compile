@@ -8,12 +8,14 @@ if [ ! -f "$PYFILE" ]; then
     echo "Python file $PYFILE does not exist."
     exit 1
 fi
-# Compile the Python script using the "compileall" module
-python3 -m compileall "$PYFILE" -b
+# Compile the Python script using the "py_compile" module
+python3 -m py_compile "$PYFILE"
 if [ $? -eq 0 ]; then
     echo "Compiling $PYFILE ..."
     compiled_filename="${PYFILE}c"
-    echo "Compilation successful. Compiled files can be found in the '__pycache__' directory."
+    mv "__pycache__/${PYFILE%.py}*.pyc" "$compiled_filename"
+    rm -rf "__pycache__"
+    echo "Compilation successful. Compiled file: $compiled_filename"
 else
     echo "Compilation failed."
 fi
