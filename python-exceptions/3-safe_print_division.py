@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 def safe_print_division(a, b):
+    try:
         result = a / b
     except ZeroDivisionError:
         result = None
@@ -8,6 +9,7 @@ def safe_print_division(a, b):
     return result
 
 if __name__ == "__main__":
+    # Example usage:
     a = 12
     b = 2
     result = safe_print_division(a, b)
