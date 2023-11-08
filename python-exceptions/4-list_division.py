@@ -4,28 +4,24 @@ def list_division(my_list_1, my_list_2, list_length):
 
     for i in range(list_length):
         try:
-            # Attempt the division
-            division_result = 0
-
-            if (isinstance(my_list_1[i], (int, float)) and
-                    isinstance(my_list_2[i], (int, float)) and
-                    my_list_2[i] != 0):
+            if isinstance(my_list_1[i], (int, float)) and isinstance(my_list_2[i], (int, float)):
+                if my_list_2[i] == 0:
+                    raise ZeroDivisionError
                 division_result = my_list_1[i] / my_list_2[i]
-
-            result.append(division_result)
-        except (ZeroDivisionError, TypeError):
+                result.append(division_result)
+            else:
+                raise TypeError
+        except ZeroDivisionError:
+            print("division by 0")
+            result.append(0)
+        except TypeError:
             print("wrong type")
             result.append(0)
         except IndexError:
             print("out of range")
             result.append(0)
         finally:
-            if division_result == 0 and isinstance(division_result, (int, float)):
-                pass
-            elif division_result == 0:
-                print("division by 0")
-            else:
-                pass
+            pass
 
     return result
 
