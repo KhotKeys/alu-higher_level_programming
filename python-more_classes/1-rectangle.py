@@ -36,30 +36,3 @@ class Rectangle:
         if value < 0:
             raise ValueError("Height must be >= 0")
         self.__height = value
-
-# Test Cases
-# Test Case 1
-try:
-    r = Rectangle(-1, 5)
-except ValueError as e:
-    print(f"[Expected]\n{e}")
-except TypeError as e:
-    print(f"[Expected]\n{e}")
-
-# Test Case 2
-try:
-    r = Rectangle(10, "abc")
-except ValueError as e:
-    print(f"[Expected]\n{e}")
-except TypeError as e:
-    print(f"[Expected]\n{e}")
-
-# Test Case 3
-try:
-    r = Rectangle(-3, -4)
-except ValueError as e:
-    print(f"[Expected]\n{e}")
-except TypeError as e:
-    print(f"[Expected]\n{e}")
-
-# Add more test cases as needed
