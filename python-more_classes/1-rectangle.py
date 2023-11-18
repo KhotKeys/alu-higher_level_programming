@@ -1,4 +1,4 @@
-#!/src/bin/python3
+#!/ src/bin/python3
 
 """Rectangle module"""
 
