@@ -1,15 +1,15 @@
 #!/usr/bin/python3
-"""
-calculate and return the area of a rectangle
+""" calculates and return the area of the rectangle
 """
 
 '''
-File name = 3-rectangle.py
-Created = 11-Nov-2023
-Author = Gabriel Khot Keys Goodwin
+File_name: 3-rectangle.py
+Created: 11-NOV-2023
+Author: Gabriel KHot Keys Pawuoi
 Size: large
 Project: 0x08-python-more_classes
-Status = Not yet submitted!
+Status: not yet submitted.
+'''
 
 
 class Rectangle:
