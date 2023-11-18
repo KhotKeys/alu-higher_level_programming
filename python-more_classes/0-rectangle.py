@@ -2,5 +2,5 @@
 """Define Rectangle"""
 
 class Rectangle:
-    """No rectangle module"""
+    """Rectangle module"""
     pass
