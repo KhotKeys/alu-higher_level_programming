@@ -1,4 +1,4 @@
-#!/src/bin/python3
+#!/usr/bin/python3
 """Define Rectangle"""
 
 class Rectangle:
