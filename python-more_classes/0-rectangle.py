@@ -3,4 +3,6 @@
 
 class Rectangle:
     """Rectangle module"""
+
+
     pass
