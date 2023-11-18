@@ -4,8 +4,8 @@
 
 '''
 File_name: 1-rectangle.py
-Created: 30-OCT-2023
-Author:UMUTONI Kevine(simplykevine)
+Created: 11-Nov-2023
+Author:Gabriel Khot Garang Pawuoi(Khot Keys)
 Size: large
 Project: 0x08-python-more_classes
 Status: been submitted.
