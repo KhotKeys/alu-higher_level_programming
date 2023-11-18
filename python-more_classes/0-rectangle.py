@@ -2,6 +2,6 @@
 """A module for rectangle"""
 
 
-class Square:
+class Rectangle:
     """Represent a rectangle."""
     pass
