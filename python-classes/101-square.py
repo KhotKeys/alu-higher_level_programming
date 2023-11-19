@@ -10,31 +10,29 @@ project = Python - Classes and Objects
 status = Not submitted
 '''
 class Square:
-    """Define a squre"""
-    def __int__(self, size=0, position=0(0,0)):
-        """initialize a square with the given size and function."""
-
+    
+    def __init__(self, size=0, position=(0, 0)):
+        """Initializes a square with a given size and position."""
         self.size = size
         self.position = position
 
     @property
     def size(self):
-        """getter allow to decorated and retrieve as a method"""
+        """Getter method for size."""
         return self.__size
 
     @size.setter
     def size(self, value):
-        """setter for the size"""
-        if type(value) is not int:
-            raise TypeError('size must be an integer')
-        elif value < 0:
-            raise ValueError('size must be >= 0')
-        else:
-            self.__size = value
+        """Setter method for size."""
+        if not isinstance(value, int):
+            raise TypeError("size must be an integer")
+        if value < 0:
+            raise ValueError("size must be >= 0")
+        self.__size = value
 
     @property
     def position(self):
-        """Getter for the position"""
+        """Getter method for position."""
         return self.__position
 
     @position.setter
