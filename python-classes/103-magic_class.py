@@ -3,6 +3,7 @@
 
 import math
 
+
 class MagicClass:
     """Represents a magic class."""
 
@@ -22,4 +23,3 @@ class MagicClass:
     def circumference(self):
         """Calculates the circumference of the MagicClass instance."""
         return 2 * math.pi * self._MagicClass__radius
-        
