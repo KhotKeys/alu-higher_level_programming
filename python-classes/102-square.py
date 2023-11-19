@@ -23,17 +23,13 @@ class Square:
     any code in a block and this is just a sample of a 2D Polygon with a ...
     ...4-Perpendicular Sides."""
 
-    def __init__(self, size=0):
-        """
-        initializes the square.
-        Args:
-        size: the size of the square
-        """
+     def __init__(self, size=0):
+        """Initializes a square with a given size."""
         self.size = size
 
     @property
     def size(self):
-        """setter method for the size"""
+        """Getter method for size."""
         return self.__size
 
     @size.setter
