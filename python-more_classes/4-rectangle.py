@@ -2,7 +2,7 @@
 """Defines a Rectangle class."""
 '''
 File_name: 0-rectangle.py
-Created: 11-NOV-2023
+Created: 12-NOV-2023
 Author: Gabriel Khot Keys Goodwin
 Size: Large
 Project: 0x08-python-more_classes
