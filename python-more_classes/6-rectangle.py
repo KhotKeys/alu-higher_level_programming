@@ -4,8 +4,8 @@
 
 '''
 File_name: 6-rectangle.py
-Created: 30-OCT-2023
-Author: UMUTONI Kevine (simplykevine)
+Created: 19-NOV-2023
+Author: Gabriel Khot Keys Garang Pawuoi
 Size: large
 Project: 0x08-python-more_classes
 Status: not yet submitted.
