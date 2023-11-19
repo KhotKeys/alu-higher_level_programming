@@ -1,29 +1,11 @@
 #!/usr/bin/python3
-"""Defines a square"""
+"""define the square"""
 
-'''
-file name = Python - Classes and Objects
-created = 19-11-2023
-Author = Gabriel Khot Garang Pawuoi
-size = undefine
-project = 102-square.py
-status = Not submitted
-'''
+
 class Square:
-     """
-    # Write a class square that defines a square:
-    # VARIABLE(" "):
-    # square(int): Simple square
-    # Return: (Success).
-    """
+    """Defines a square."""
 
-    """ 'class square' defines the class is like a blueprint or template...
-    for creating objects...
-    while the 'pass' is used as a placeholder when you don't want to add...
-    any code in a block and this is just a sample of a 2D Polygon with a ...
-    ...4-Perpendicular Sides."""
-
-     def __init__(self, size=0):
+    def __init__(self, size=0):
         """Initializes a square with a given size."""
         self.size = size
 
