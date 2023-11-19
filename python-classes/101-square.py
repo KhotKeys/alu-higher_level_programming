@@ -9,9 +9,12 @@ size = undefine
 project = Python - Classes and Objects
 status = Not submitted
 '''
+
 class Square:
-    
-    def __init__(self, size=0, position=(0, 0)):
+    """Defines a square.""" 
+   
+
+   def __init__(self, size=0, position=(0, 0)):
         """Initializes a square with a given size and position."""
         self.size = size
         self.position = position
