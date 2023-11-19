@@ -1,20 +1,10 @@
 #!/usr/bin/python3
 """Define the square"""
 
-'''
-file name = 101-square.py
-created = 19-11-2023
-Author = Gabriel Khot Garang Pawuoi
-size = undefine
-project = Python - Classes and Objects
-status = Not submitted
-'''
-
 class Square:
-    """Defines a square.""" 
-   
+    """Defines a square."""
 
-   def __init__(self, size=0, position=(0, 0)):
+    def __init__(self, size=0, position=(0, 0)):
         """Initializes a square with a given size and position."""
         self.size = size
         self.position = position
