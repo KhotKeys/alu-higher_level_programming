@@ -1,14 +1,14 @@
 #!/usr/bin/python3
 """Defines a Rectangle class."""
-
 '''
 File_name: 0-rectangle.py
-Created: 19-11-2023
+Created: 11-23-2023
 Author: Gabriel Khot Garang Pawuoi
 Size: Large
 Project: 0x08-python-more_classes
 Status: Not yet submitted.
 '''
+
 
 class Rectangle:
     """Represent a rectangle."""
@@ -76,4 +76,6 @@ class Rectangle:
 
     def __repr__(self):
         """Return the string representation of the Rectangle."""
-        return f"Rectangle({self.width}, {self.height})"
+        rect = "Rectangle(" + str(self.__width)
+        rect += ", " + str(self.__height) + ")"
+        return rect
