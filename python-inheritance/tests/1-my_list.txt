@@ -1,4 +1,4 @@
->>> MyList = _import_('1-my_list').MyList
+>>> MyList = __import__('1-my_list').MyList
 >>> d = MyList()
 >>> isinstance(d, list)
 True
