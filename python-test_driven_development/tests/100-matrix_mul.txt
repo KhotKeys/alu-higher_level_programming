@@ -11,7 +11,7 @@ Usage
 
 ::
 
-    >>> matrix_mul = _import_('100-matrix_mul').matrix_mul
+    >>> matrix_mul = __import__('100-matrix_mul').matrix_mul
     >>> m_a = [
     ... [1, 2],
     ... [3, 4],
@@ -152,7 +152,7 @@ not a list, a TypeError is raised.
     Traceback (most recent call last):
     TypeError: m_a must be a list
 
-Not just any list - they must be lists of lists!
+Not just any list - they *must* be lists of lists!
 
 ::
 
@@ -172,7 +172,7 @@ Not just any list - they must be lists of lists!
     Traceback (most recent call last):
     TypeError: m_a must be a list of lists
 
-And not just any list of lists - they must be lists of lists containing
+And not just any list of lists - they *must* be lists of lists containing
 integers or floats!
 
 ::
