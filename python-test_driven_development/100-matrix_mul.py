@@ -1,61 +1,75 @@
 #!/usr/bin/python3
-"""Unittests for max_integer([..])."""
+"""Defines a matrix multiplication function."""
+'''
+File_name:
+Created: 5-DEC-2023
+Author: UMUTONI Kevine (simplykevine)
+Size: Large
+Project: python-test_driven_development
+Status: Not yet submitted.
+'''
 
-import unittest
-max_integer = _import_('6-max_integer').max_integer
 
+def matrix_mul(m_a, m_b):
+    """Multiply two matrices.
 
-class TestMaxInteger(unittest.TestCase):
-    """Define unittests for max_integer([..])."""
+    Args:
+        m_a (list of lists of ints/floats): The first matrix.
+        m_b (list of lists of ints/floats): The second matrix.
+    Raises:
+        TypeError: If either m_a or m_b is not a list of lists of ints/floats.
+        TypeError: If either m_a or m_b is empty.
+        TypeError: If either m_a or m_b has different-sized rows.
+        ValueError: If m_a and m_b cannot be multiplied.
+    Returns:
+        A new matrix representing the multiplication of m_a by m_b.
+    """
 
-    def test_ordered_list(self):
-        """Test an ordered list of integers."""
-        ordered = [1, 2, 3, 4]
-        self.assertEqual(max_integer(ordered), 4)
+    if m_a == [] or m_a == [[]]:
+        raise ValueError("m_a can't be empty")
+    if m_b == [] or m_b == [[]]:
+        raise ValueError("m_b can't be empty")
 
-    def test_unordered_list(self):
-        """Test an unordered list of integers."""
-        unordered = [1, 2, 4, 3]
-        self.assertEqual(max_integer(unordered), 4)
+    if not isinstance(m_a, list):
+        raise TypeError("m_a must be a list")
+    if not isinstance(m_b, list):
+        raise TypeError("m_b must be a list")
 
-    def test_max_at_begginning(self):
-        """Test a list with a beginning max value."""
-        max_at_beginning = [4, 3, 2, 1]
-        self.assertEqual(max_integer(max_at_beginning), 4)
+    if not all(isinstance(row, list) for row in m_a):
+        raise TypeError("m_a must be a list of lists")
+    if not all(isinstance(row, list) for row in m_b):
+        raise TypeError("m_b must be a list of lists")
 
-    def test_empty_list(self):
-        """Test an empty list."""
-        empty = []
-        self.assertEqual(max_integer(empty), None)
+    if not all((isinstance(ele, int) or isinstance(ele, float))
+               for ele in [num for row in m_a for num in row]):
+        raise TypeError("m_a should contain only integers or floats")
+    if not all((isinstance(ele, int) or isinstance(ele, float))
+               for ele in [num for row in m_b for num in row]):
+        raise TypeError("m_b should contain only integers or floats")
 
-    def test_one_element_list(self):
-        """Test a list with a single element."""
-        one_element = [7]
-        self.assertEqual(max_integer(one_element), 7)
+    if not all(len(row) == len(m_a[0]) for row in m_a):
+        raise TypeError("each row of m_a must should be of the same size")
+    if not all(len(row) == len(m_b[0]) for row in m_b):
+        raise TypeError("each row of m_b must should be of the same size")
 
-    def test_floats(self):
-        """Test a list of floats."""
-        floats = [1.53, 6.33, -9.123, 15.2, 6.0]
-        self.assertEqual(max_integer(floats), 15.2)
+    if len(m_a[0]) != len(m_b):
+        raise ValueError("m_a and m_b can't be multiplied")
 
-    def test_ints_and_floats(self):
-        """Test a list of ints and floats."""
-        ints_and_floats = [1.53, 15.5, -9, 15, 6]
-        self.assertEqual(max_integer(ints_and_floats), 15.5)
+    inverted_b = []
+    for r in range(len(m_b[0])):
+        new_row = []
+        for c in range(len(m_b)):
+            new_row.append(m_b[c][r])
+        inverted_b.append(new_row)
 
-    def test_string(self):
-        """Test a string."""
-        string = "Brennan"
-        self.assertEqual(max_integer(string), 'r')
+    new_matrix = []
+    for row in m_a:
+        new_row = []
+        for col in inverted_b:
+            prod = 0
+            for i in range(len(inverted_b[0])):
+                prod += row[i] * col[i]
+            new_row.append(prod)
+        new_matrix.append(new_row)
 
-    def test_list_of_strings(self):
-        """Test a list of strings."""
-        strings = ["Brennan", "is", "my", "name"]
-        self.assertEqual(max_integer(strings), "name")
-
-    def test_empty_string(self):
-        """Test an empty string."""
-        self.assertEqual(max_integer(""), None)
-
-if _name_ == '_main_':
-    unittest.main()
+    return new_matrix
