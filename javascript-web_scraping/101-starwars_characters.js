@@ -1,4 +1,4 @@
-#!/:usr/bin/node
+#!/usr/bin/node
 const movieId = process.argv.slice(2)[0];
 const request = require('request');
 const filmsUrl = `https://swapi-api.hbtn.io/api/films/${movieId}`;
